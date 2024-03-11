@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptographic Failures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center-container">
+        <div class="label-container">
+            <?php if ($accountDetails): ?>
+                <?php 
+                if ($accountDetails && $_SESSION['user_id'] == 8073){
+                    echo "<h3>Bounty_Boys{Captured_The_Flag}</h3><br>"; 
+                } else {
+                    echo "<h3>Is that all you can do? Try something better!</h3>";
+                }
+                ?>
+                <div class="account-details">
+                    <p><strong>Account Number:</strong> <?= htmlspecialchars($accountDetails['account_number']) ?></p>
+                    <p><strong>Balance:</strong> <?= htmlspecialchars($accountDetails['balance']) ?></p>
+                </div>
+            <?php elseif ($_SERVER['REQUEST_METHOD'] == 'GET'): ?>
+                <p class="error-message">Account not found or invalid account number.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</body>
+</html>
