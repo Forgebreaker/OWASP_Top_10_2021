@@ -12,6 +12,7 @@
 
   + Accessing Unauthorized Functions: They might also be able to do things they shouldn’t be able to do
 
-![Screenshot from 2024-03-11 21-23-06](https://github.com/Forgebreaker/OWASP_Top_10_2021/assets/112708857/ff3e2936-7bba-4790-846e-a05c5565b3df)
+![owasp_top1](https://github.com/Forgebreaker/OWASP_Top_10_2021/assets/112708857/77c9801f-1399-4f8e-a24b-5836f715c34f)
+
 
 
