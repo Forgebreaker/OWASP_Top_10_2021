@@ -1,4 +1,4 @@
-# OWASP Top 2: Cryptographic Failures
+# Cryptographic Failures
 
 - Imagine you have a secret message that you want to send to a friend in a room full of people. You don't want anyone else to hear it, so you use a secret code that only you and your friend know. Cryptography is like that secret code. It scrambles your data so that only the right person can understand it.
 
