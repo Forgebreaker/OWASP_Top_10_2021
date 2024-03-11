@@ -9,6 +9,3 @@
   + When you send your secret message (like an email), you want to make sure that nobody can intercept it while it's traveling from you to your friend. If it's not well protected, someone could grab it and read it.
 
   + Once your message reaches your friend, they might keep it in a box (like an email server). You also want this box to be locked so that only your friend can open it, not even the person who owns the box.
-
-![owasp_top2](https://github.com/Forgebreaker/OWASP_Top_10_2021/assets/112708857/512cc956-0a39-49e9-af15-981e2c934ffb)
-
