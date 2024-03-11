@@ -10,4 +10,5 @@
 
   + Once your message reaches your friend, they might keep it in a box (like an email server). You also want this box to be locked so that only your friend can open it, not even the person who owns the box.
 
-![Screenshot from 2024-03-11 21-48-28](https://github.com/Forgebreaker/OWASP_Top_10_2021/assets/112708857/ed16a34c-3b69-4690-9e0b-8c693b920211)
+![owasp_top2](https://github.com/Forgebreaker/OWASP_Top_10_2021/assets/112708857/512cc956-0a39-49e9-af15-981e2c934ffb)
+
