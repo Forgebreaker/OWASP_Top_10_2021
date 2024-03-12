@@ -9,6 +9,7 @@ RUN chmod 750 /var/www/html
 RUN find . -type f -exec chmod 640 {} \;
 RUN find . -type d -exec chmod 750 {} \;
 
+RUN echo "Bounty_Boys{Captured_The_Flag}" > /flag.txt
 
 
 
