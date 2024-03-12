@@ -8,4 +8,4 @@ What can go wrong:
 
   + Hacker can access, modify, or delete database information or execute any system commands.
 
-  + With OS command injection, the worst-case scenario is when attackers manage to execute a command that gives them a backdoor into the server.Once attackers have gained a foothold on your web server through command injection, they can start snooping around, exploring your systems, and looking for other ways to hop from one system to another.
+  + With OS command injection, the worst-case scenario is when attackers manage to execute a command that gives them a backdoor into the server. Once attackers have gained a foothold on your web server through command injection, they can start snooping around, exploring your systems, and looking for other ways to hop from one system to another.
