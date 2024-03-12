@@ -1,6 +1,6 @@
 # Bounty Boys: Injection Flaws
 
-Injection flaws are a common type of vulnerability application (Top 1 in 2017 and Top 3 in 2021)
+Injection flaws is a common type of vulnerability application (Top 1 in 2017 and Top 3 in 2021)
 
 They happen when the input provided by a user is misunderstood by the application as a command or a part of a command. Allowing attackers to manipulate the behavior of the application
 
