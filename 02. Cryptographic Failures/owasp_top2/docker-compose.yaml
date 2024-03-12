@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  broken-access-control:
+  cryptographic-failures:
     build: ./vuln-lab
     restart: unless-stopped
     ports:
