@@ -1,0 +1,14 @@
+FROM php:8.0-apache
+
+WORKDIR /var/www/html/
+
+COPY ./resource .
+
+RUN chown -R root:www-data /var/www/html
+RUN chmod 750 /var/www/html
+RUN find . -type f -exec chmod 640 {} \;
+RUN find . -type d -exec chmod 750 {} \;
+
+
+
+

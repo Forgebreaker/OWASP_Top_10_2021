@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  broken-access-control:
+    build: ./vuln-lab
+    restart: unless-stopped
+    ports:
+      - "2000:80"
+    volumes:
+      - ./vuln-lab/resource:/var/www/html
