@@ -11,8 +11,6 @@ $client_ip = $_SERVER['REMOTE_ADDR'];
 
 if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
     $client_ip = $_SERVER['HTTP_CLIENT_IP'];
-} elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-    $client_ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
 } else {
     $client_ip = $_SERVER['REMOTE_ADDR']; 
 }
@@ -76,7 +74,7 @@ if (isset($_POST['id']) and isset($_POST['otp'])) {
                     <input type="text" id="info" name="id" placeholder="Enter Your Device ID" required>
                 </div>
                 <div class="input-group">
-                    <input type="text" id="info" name="otp" placeholder="Enter The OTP" required>
+                    <input type="text" id="info" name="otp" placeholder="Enter The 4-Digit OTP" required>
                 </div>
                 <input type="submit" value="Login">
             </form>
