@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  Vulnerable-and-Outdated-Components:
+    build: ./vuln-lab
+    ports:
+      - "6006:80"
+    volumes:
+      - ./vuln-lab/resource/web-conf/httpd.conf:/usr/local/apache2/conf/httpd.conf
+      - ./vuln-lab/resource/web-src:/usr/local/apache2/htdocs

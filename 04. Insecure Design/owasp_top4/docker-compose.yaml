@@ -10,6 +10,6 @@ services:
     build: ./vuln-lab
     restart: unless-stopped
     ports: 
-      - "4000:80"
+      - "4004:80"
     volumes:
       - ./vuln-lab/resource:/var/www/html
