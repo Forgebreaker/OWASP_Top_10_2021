@@ -1,4 +1,5 @@
 <?php 
+session_start();
 if(isset($_GET["debug"])) die(highlight_file(__FILE__));  // Remember to delete this
 ?>
 
@@ -43,7 +44,6 @@ if(isset($_GET["debug"])) die(highlight_file(__FILE__));  // Remember to delete 
                 }
             }
 
-            session_start();
             if (!isset($_SESSION["Guns"])) {
                 $_SESSION["Guns"] = array();
             }
