@@ -1,39 +1,19 @@
 <?php
-$redis = new Redis();
-$redis->connect('redis', 6379);
-$redis->auth('hungthinhtran_bountyboys');
+$allowed_ip = '127.0.0.1';
+$user_ip = $_SERVER['REMOTE_ADDR'];
 
-$max_calls_limit  = 5;
-$time_period      = 60;
-$total_user_calls = 0;
-
-$client_ip = $_SERVER['REMOTE_ADDR'];
-
-if (!empty($_SERVER['HTTP_CLIENT_IP'])) {
-    $client_ip = $_SERVER['HTTP_CLIENT_IP'];
-} else {
-    $client_ip = $_SERVER['REMOTE_ADDR']; 
-}
-
-if (!$redis->exists($client_ip)) {
-    $redis->set($client_ip, 1);
-    $redis->expire($client_ip, $time_period);
-    $total_user_calls = 1;
-} else {
-    $redis->incr($client_ip);
-    $total_user_calls = $redis->get($client_ip);
-    if ($total_user_calls > $max_calls_limit) {
-        exit();
-    }
+if ($user_ip !== $allowed_ip) {
+    header('HTTP/1.0 403 Forbidden');
+    exit('You are not allowed to access this file.');
 }
 
 $db = new SQLite3('0f1dc3a4a495befc4fd568aa151b6c8b.db');
 $alert = "";
 
-if (isset($_POST['id']) and isset($_POST['otp'])) {
+if (isset($_GET['id']) and isset($_GET['otp'])) {
     $time = date("Y-m-d H:i:s");
-    $id = $_POST['id'];
-    $otp = $_POST['otp'];
+    $id = $_GET['id'];
+    $otp = $_GET['otp'];
 
     $stmt = $db->prepare("SELECT * FROM data WHERE id = :id AND otp = :otp;");
     $stmt->bindValue(':id', $id, SQLITE3_TEXT);
@@ -59,15 +39,14 @@ if (isset($_POST['id']) and isset($_POST['otp'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="center-container">
         <div class="login-form">
-            <h2>Login Form</h2>
-            <form action="index.php" method="post">
+            <h2>Login Form</h2> <!--Remember to remove device CVE-170144 out of the system ! It is vulnerable-->
+            <form action="index.php" method="GET">
             <div class="input-group">
                     <input type="text" id="info" name="id" placeholder="Enter Your Device ID" required>
                 </div>

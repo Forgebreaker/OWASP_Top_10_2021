@@ -18,7 +18,7 @@ $username = $_SESSION['username'];
 if ($username == "superuser") {
     $content = isset($users[$username]['content']) ? $users[$username]['content'] : '';
 } else {
-    $content = "Is that all you can do ? Show me what you've got !";
+    $content = "Is that all you can do ? Show me what you've got ! Try to login as superuser";
 }
 
 ?>

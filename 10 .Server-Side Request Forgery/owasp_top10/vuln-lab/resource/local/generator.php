@@ -1,4 +1,12 @@
 <?php
+$allowed_ip = '127.0.0.1';
+$user_ip = $_SERVER['REMOTE_ADDR'];
+
+if ($user_ip !== $allowed_ip) {
+    header('HTTP/1.0 403 Forbidden');
+    exit('You are not allowed to access this file.');
+}
+
 $db = new SQLite3('0f1dc3a4a495befc4fd568aa151b6c8b.db');
 
 $info = "";
@@ -11,8 +19,8 @@ function generateOTP($digits = 4) {
     return $otp;
 }
 
-if (isset($_POST['id'])) {
-    $id = $_POST['id'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     $time = date("Y-m-d H:i:s");
     $connect = $db->prepare("SELECT * FROM data WHERE id = :id");
     $connect->bindValue(':id', $id, SQLITE3_TEXT);
@@ -44,14 +52,18 @@ if (isset($_POST['id'])) {
 ?>
 
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTP Generator</title>
     <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <div class="center-container">
         <div class="login-form">
-            <form action="#" method="post">
+            <form action="#" method="GET">
                 <h1>Authentication</h1>
                 <div class="input-group">
                     <input type="id" class="form-control" name="id" placeholder="Enter Your Device ID" required>
