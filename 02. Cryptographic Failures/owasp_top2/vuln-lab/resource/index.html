@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cryptographic Failures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-image: url('background.png');">
+    <div class="center-container">
+        <div class="login-form">
+            <h2>Login</h2> <!-- Default Credential: guest/guest -->
+            <?php if ($loginError): ?>
+                <p class="error-message"><?= $loginError ?></p>
+            <?php endif; ?>
+            <form method="post" action="index.php">
+                <div class="input-group">
+                    <label for="username"></label>
+                    <input type="text" name="username" id="username" placeholder="Username">
+                </div>
+                <div class="input-group">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

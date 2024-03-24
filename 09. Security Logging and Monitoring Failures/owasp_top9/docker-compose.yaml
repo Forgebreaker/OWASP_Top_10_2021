@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  security-logging-and-monitoring-failures:
+    build: ./vuln-lab
+    restart: unless-stopped
+    ports:
+      - "9009:80"
+    volumes:
+      - ./vuln-lab/resource:/var/www/html

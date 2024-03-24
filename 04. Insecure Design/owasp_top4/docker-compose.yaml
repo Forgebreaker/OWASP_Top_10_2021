@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  redis:
+    image: redis:latest
+    restart: always
+    command: redis-server --save 20 1 --loglevel warning --requirepass hungthinhtran_bountyboys
+
+  insecure-design:
+    build: ./vuln-lab
+    restart: unless-stopped
+    ports: 
+      - "4004:80"
+    volumes:
+      - ./vuln-lab/resource:/var/www/html

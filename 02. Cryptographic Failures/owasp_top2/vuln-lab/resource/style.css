@@ -1,0 +1,133 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.center-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.login-form {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #A70D2A;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"], input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="submit"] {
+    background-color: #A70D2A;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 80%;
+}
+
+input[type="submit"]:hover {
+    background-color: #A70D2A;
+}
+
+h2 {
+    color: whitesmoke;
+}
+
+.error-message {
+    color: #A70D2A;
+}
+
+@media (max-width: 600px) {
+    .center-container {
+        padding: 10px;
+    }
+
+    .login-form {
+        padding: 15px;
+    }
+}
+
+.account-details {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #A70D2A;
+    text-align: left;
+}
+
+.account-details h3 {
+    color: #A70D2A;
+    margin-bottom: 15px;
+}
+
+.account-details p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.error-message {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #A70D2A;
+    color: #A70D2A;
+    text-align: center;
+}
+
+.label-container {
+    background-color: #1e1e1e;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 #A70D2A;
+    padding: 20px;
+    text-align: center;
+}
+
+.label-container h3 {
+    color: #A70D2A;
+    margin-bottom: 20px;
+}
+
+.account-details {
+    text-align: center;
+    color: white;
+}
+
+.account-details p {
+    margin: 5px 0;
+}
+
+.error-message {
+    color: #A70D2A;
+    margin-top: 20px;
+}

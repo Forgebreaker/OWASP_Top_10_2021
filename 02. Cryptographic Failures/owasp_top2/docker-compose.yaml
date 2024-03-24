@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  cryptographic-failures:
+    build: ./vuln-lab
+    restart: unless-stopped
+    ports:
+      - "2002:80"
+    volumes:
+      - ./vuln-lab/resource:/var/www/html

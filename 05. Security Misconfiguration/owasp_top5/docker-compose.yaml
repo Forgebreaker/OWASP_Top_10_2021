@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  security-misconfiguration:
+    build: ./vuln-lab
+    restart: unless-stopped
+    ports: 
+      - "5005:80"
+    volumes:
+      - ./vuln-lab/resource:/var/www/html

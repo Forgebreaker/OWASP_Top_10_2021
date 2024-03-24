@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Account Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center-container">
+        <div class="label-container">
+            <?php if ($accountDetails): ?>
+                <h3>Bank Information</h3>
+                <div class="account-details">
+                    <p><strong>Account Number:</strong> <?= htmlspecialchars($accountDetails['account_number']) ?></p>
+                    <p><strong>Balance:</strong> <?= htmlspecialchars($accountDetails['balance']) ?></p>
+                </div>
+            <?php elseif ($_SERVER['REQUEST_METHOD'] == 'GET'): ?>
+                <p class="error-message">Account not found or invalid account number.</p>
+            <?php endif; ?>
+        </div>
+    </div>
+</body>
+</html>

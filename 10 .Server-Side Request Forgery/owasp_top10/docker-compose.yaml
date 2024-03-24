@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  server-side-request-forgery:
+    build: ./vuln-lab
+    restart: unless-stopped
+    ports: 
+      - "10010:80"
+    volumes:
+      - ./vuln-lab/resource:/var/www/html
