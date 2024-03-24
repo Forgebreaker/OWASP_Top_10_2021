@@ -6,7 +6,7 @@ if(isset($_GET["debug"])) die(highlight_file(__FILE__));  // Remember to delete 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Gun Catalogue</title>
+    <title>Software and Data Integrity Failures</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
