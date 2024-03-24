@@ -37,7 +37,7 @@ body {
     margin-bottom: 5px;
 }
 
-.input-group input[type="email"],.input-group input[type="id"], .input-group input[type="text"], .input-group input[type="password"] {
+.input-group input[type="name"],.input-group input[type="type"], .input-group input[type="text"], .input-group input[type="password"] {
     width: 80%;
     padding: 10px;
     border: none;
@@ -110,5 +110,6 @@ input[type="submit"]:hover {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-    width: 50%;
+    width: 80%;
 }
+
